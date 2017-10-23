@@ -2,10 +2,11 @@
 using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.Globalization;
+using Sitecore.Pipelines.Search;
 using Sitecore.Search;
 using System;
 
-namespace Sitecore.Pipelines.Search
+namespace Sitecore.Support.Pipelines.Search
 {
     /// <summary>
     /// Resolves id searches.
@@ -29,7 +30,6 @@ namespace Sitecore.Pipelines.Search
                 SearchResult result = SearchResult.FromItem(item);
                 args.Result.AddResultToCategory(result, Translate.Text("Direct Hit"));
             }
-            args.AbortPipeline();
         }
     }
 }
